@@ -21,6 +21,10 @@ mongoose.connect(process.env.MONGO_URI, {
 // Usar las rutas de los problemas
 app.use('/api', issueRoutes);
 
+app.get('/', (req, res) => {
+  res.send('API de seguimiento de problemas funcionando correctamente.');
+});
+
 // Iniciar el servidor
 app.listen(process.env.PORT || 5000, () => {
   console.log('Servidor corriendo en el puerto 5000');
