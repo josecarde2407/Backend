@@ -1,0 +1,458 @@
+/* ==========================================================================
+   Reset General y Base
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #e9ecef;
+    color: #333;
+}
+
+/* ==========================================================================
+   Contenedor Principal y Layout
+   ========================================================================== */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* ==========================================================================
+   Sidebar (se mantiene lo que ya tienes)
+   ========================================================================== */
+.sidebar {
+    width: 60px;
+    background: #333;
+    color: #fff;
+    padding-top: 20px;
+    position: fixed;
+    height: 100vh;
+    overflow: hidden;
+    transition: width 0.3s;
+}
+
+.sidebar.active {
+    width: 250px;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 40px;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    padding: 8px;
+    width: 100%;
+}
+
+.sidebar ul li i {
+    font-size: 22px;
+    min-width: 30px;
+}
+
+.sidebar .text {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sidebar.active .text {
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Submenús
+   ========================================================================== */
+.submenu {
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+    transition: max-height 0.3s ease-out;
+}
+
+.submenu.open {
+    display: block;
+}
+
+.submenu li a {
+    font-size: 16px;
+    padding: 5px 10px;
+    display: block;
+}
+
+/* Flechas de submenú */
+.menu-item {
+    position: relative;
+}
+
+.menu-item .arrow {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.submenu.open + .arrow {
+    transform: rotate(180deg);
+}
+
+.sidebar:not(.active) .submenu {
+    display: none;
+}
+
+/* ==========================================================================
+   Contenido Principal (Main)
+   ========================================================================== */
+.content {
+    flex-grow: 1;
+    padding: 40px 20px;
+    width: 100%;
+    margin-left: 60px;
+    margin-bottom: 70px; /* Espacio para el footer fijo */
+    transition: margin-left 0.3s;
+    background: #e9ecef;
+}
+
+.content-shift {
+    margin-left: 250px;
+}
+
+/* Encabezado de Configuración */
+.content header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.content header h1 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.content header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* ==========================================================================
+   Tarjeta de Configuración (Formulario)
+   ========================================================================== */
+.config-card {
+    background: #fff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.config-card label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.config-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.config-card button {
+    width: 100%;
+    padding: 12px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.config-card button:hover {
+    background: #0056b3;
+}
+
+#status {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #d9534f;
+}
+
+/* ==========================================================================
+   Estilos Específicos para el Formulario de Configuración (Main)
+   ========================================================================== */
+/* Contenedor para el input de contraseña con ícono en el formulario de configuración */
+.config-card .password-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Input de contraseña con altura y line-height definidos para un mejor centrado */
+.config-card .password-field input {
+    width: 100%;
+    padding-right: 50px; /* Espacio para el ícono */
+    height: 45px;
+    line-height: 45px;  /* Centrado vertical */
+    font-size: 16px;
+}
+
+/* Ícono "ojito" en el formulario de configuración */
+.config-card .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 35%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #aaa;
+    font-size: 1.5rem;
+}
+
+/* ==========================================================================
+   Modal de Login (Actualizado)
+   ========================================================================== */
+   .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0; /* Equivalente a top: 0; right: 0; bottom: 0; left: 0; */
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 320px;
+    max-width: 90%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Contenedor para el input de contraseña con ícono en el modal */
+.modal-content .password-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.modal-content .password-field input {
+    width: 100%;
+    padding-right: 45px; /* Espacio para el ícono */
+}
+
+.modal-content .toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #666;
+    cursor: pointer;
+}
+
+#loginStatus {
+    font-size: 14px;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 12px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background: #0056b3;
+}
+
+.cancel-btn {
+    background: #ff4c4c !important;
+    color: #fff !important;
+    border: 1px solid #cc0000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background: #e60000 !important;
+}
+
+
+/* ==========================================================================
+   Estilo para deshabilitar enlaces del menú
+   ========================================================================== */
+.menu-item a.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* ==========================================================================
+   Estilo para mostrar la Configuración Actual de forma limpia
+   ========================================================================== */
+.current-config {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 16px;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+.current-config strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+/* ==========================================================================
+   Pie de Página
+   ========================================================================== */
+   .footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .footer p {
+    margin: 5px 0;
+  }
+  
+  .footer i {
+    margin-right: 8px;
+    color: #ffd700; /* Color dorado para resaltar, por ejemplo */
+  }
+
+  /* Contenedor del formulario */
+.form-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Alineación y diseño del formulario */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.form input {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form button:hover {
+    background: #0056b3;
+}
+
+/* Contenedor de la tabla */
+.table-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Tabla responsiva */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Estilización de la tabla */
+#resultTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#resultTable th, #resultTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#resultTable th {
+    background: #007BFF;
+    color: white;
+}
+
+  
