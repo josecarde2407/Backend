@@ -1,0 +1,181 @@
+05021309514 | Timeout tras 3 intentos.
+05021309515 | Timeout tras 3 intentos.
+05021309517 | Timeout tras 3 intentos.
+05021309518 | Timeout tras 3 intentos.
+05021309520 | Token expirado o no autorizado.
+05021309521 | Token expirado o no autorizado.
+05021309524 | Token expirado o no autorizado.
+05021309525 | Token expirado o no autorizado.
+05021309532 | Token expirado o no autorizado.
+05021309533 | Token expirado o no autorizado.
+05021309534 | Token expirado o no autorizado.
+05021309538 | Token expirado o no autorizado.
+05021309544 | Token expirado o no autorizado.
+05021309554 | Token expirado o no autorizado.
+05021309555 | Token expirado o no autorizado.
+05021309556 | Token expirado o no autorizado.
+05021309557 | Token expirado o no autorizado.
+05021309558 | Token expirado o no autorizado.
+05021309571 | Token expirado o no autorizado.
+05021309572 | Token expirado o no autorizado.
+05021309575 | Token expirado o no autorizado.
+05021309576 | Token expirado o no autorizado.
+05021309583 | Token expirado o no autorizado.
+05021309584 | Token expirado o no autorizado.
+05021309585 | Token expirado o no autorizado.
+05021309586 | Token expirado o no autorizado.
+05021309587 | Token expirado o no autorizado.
+05021309588 | Token expirado o no autorizado.
+05021309589 | Token expirado o no autorizado.
+05021309590 | Token expirado o no autorizado.
+05021309591 | Token expirado o no autorizado.
+05021309594 | Token expirado o no autorizado.
+05021309595 | Token expirado o no autorizado.
+05021309597 | Token expirado o no autorizado.
+05021309598 | Token expirado o no autorizado.
+05021309599 | Token expirado o no autorizado.
+05021309600 | Token expirado o no autorizado.
+05021309601 | Token expirado o no autorizado.
+05021509729 | Token expirado o no autorizado.
+05021509730 | Token expirado o no autorizado.
+05021509888 | Token expirado o no autorizado.
+05021509889 | Token expirado o no autorizado.
+05021509890 | Token expirado o no autorizado.
+05021509891 | Token expirado o no autorizado.
+05021509892 | Token expirado o no autorizado.
+05021509893 | Token expirado o no autorizado.
+05021509894 | Token expirado o no autorizado.
+05021509895 | Token expirado o no autorizado.
+05021509896 | Token expirado o no autorizado.
+05021509897 | Token expirado o no autorizado.
+05021509898 | Token expirado o no autorizado.
+05021509899 | Token expirado o no autorizado.
+05021509900 | Token expirado o no autorizado.
+05021509901 | Token expirado o no autorizado.
+05021509902 | Token expirado o no autorizado.
+05021509903 | Token expirado o no autorizado.
+05021509904 | Token expirado o no autorizado.
+05021509905 | Token expirado o no autorizado.
+05021509906 | Token expirado o no autorizado.
+05021509907 | Token expirado o no autorizado.
+05021509908 | Token expirado o no autorizado.
+05021509909 | Token expirado o no autorizado.
+05021509910 | Token expirado o no autorizado.
+05021509911 | Token expirado o no autorizado.
+05021509914 | Token expirado o no autorizado.
+05021509919 | Token expirado o no autorizado.
+05021509920 | Token expirado o no autorizado.
+05021509921 | Token expirado o no autorizado.
+05021509923 | Token expirado o no autorizado.
+05021509924 | Token expirado o no autorizado.
+05021509925 | Token expirado o no autorizado.
+05021509927 | Token expirado o no autorizado.
+05021509928 | Token expirado o no autorizado.
+05021509929 | Token expirado o no autorizado.
+05021509932 | Token expirado o no autorizado.
+05022109506 | Token expirado o no autorizado.
+05022109507 | Token expirado o no autorizado.
+05023209671 | Token expirado o no autorizado.
+05023209672 | Token expirado o no autorizado.
+05023209673 | Token expirado o no autorizado.
+05023209674 | Token expirado o no autorizado.
+05023209677 | Token expirado o no autorizado.
+05023209694 | Token expirado o no autorizado.
+05023209695 | Token expirado o no autorizado.
+05023209702 | Token expirado o no autorizado.
+05023209703 | Token expirado o no autorizado.
+05023209705 | Token expirado o no autorizado.
+05023209712 | Token expirado o no autorizado.
+05023209713 | Token expirado o no autorizado.
+05023209714 | Token expirado o no autorizado.
+05023209715 | Token expirado o no autorizado.
+05023209716 | Token expirado o no autorizado.
+05023209717 | Token expirado o no autorizado.
+05023209731 | Token expirado o no autorizado.
+05023209746 | Token expirado o no autorizado.
+05023209747 | Token expirado o no autorizado.
+05023209748 | Token expirado o no autorizado.
+05023209749 | Token expirado o no autorizado.
+032020100032 | Token expirado o no autorizado.
+032020100041 | Token expirado o no autorizado.
+032020100057 | Token expirado o no autorizado.
+032020100058 | Token expirado o no autorizado.
+Proceso completado.
+05021309520 | Excepción: ('Connection aborted.', ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None))
+05021309524 | Código: 400 | Respuesta: {"Success":false,"Message":"Referencia a objeto no establecida como instancia de un objeto.","Exception":{"ClassName":"System.NullReferenceException","Message":"Referencia a objeto no establecida como instancia de un objeto.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   en SDK.Extensions.Core.GetCompany() en C:\\Users\\joel.nunez\\Desktop\\WEB SERVICES WMS\\WEB SERVICES WMS\\SDK\\Extensions\\Core.cs:línea 41\r\n   en SDK.Extensions.Core.ConnectToCompany(CompanyModelDIAPI model, Boolean newConnection) en C:\\Users\\joel.nunez\\Desktop\\WEB SERVICES WMS\\WEB SERVICES WMS\\SDK\\Extensions\\Core.cs:línea 104\r\n   en System.Threading.Tasks.Task`1.InnerInvoke()\r\n   en System.Threading.Tasks.Task.Execute()\r\n--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---\r\n   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   en SMA_WEBAPI_WMS.Controllers.ItemsController.<Patch>d__2.MoveNext() en C:\\Users\\joel.nunez\\Desktop\\WEB SERVICES WMS\\WEB SERVICES WMS\\SMA_WEBAPI_WMS\\Controllers\\ItemsController.cs:línea 50","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetCompany\nSDK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\nSDK.Extensions.Core\nSAPbobsCOM.Company GetCompany()","HResult":-2147467261,"Source":"SDK","WatsonBuckets":null}}
+05021309533 | Código: 503 | Respuesta: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD><TITLE>Service Unavailable</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+<BODY><h2>Service Unavailable</h2>
+<hr><p>HTTP Error 503. The service is unavailable.</p>
+</BODY></HTML>
+
+05021309534 | Código: 503 | Respuesta: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<HTML><HEAD><TITLE>Service Unavailable</TITLE>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=us-ascii"></HEAD>
+<BODY><h2>Service Unavailable</h2>
+<hr><p>HTTP Error 503. The service is unavailable.</p>
+</BODY></HTML>
+
+05021309538 | Excepción: HTTPConnectionPool(host='192.168.5.10', port=8081): Max retries exceeded with url: /SMA_WEBAPI_WMS/WS/Services/Items/1/05021309538 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A3A436DB50>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión'))
+05021309572 | Código: 400 | Respuesta: {"Success":false,"Message":"Referencia a objeto no establecida como instancia de un objeto.","Exception":{"ClassName":"System.NullReferenceException","Message":"Referencia a objeto no establecida como instancia de un objeto.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   en SDK.Extensions.Core.GetCompany() en C:\\Users\\joel.nunez\\Desktop\\WEB SERVICES WMS\\WEB SERVICES WMS\\SDK\\Extensions\\Core.cs:línea 41\r\n   en SDK.Extensions.Core.ConnectToCompany(CompanyModelDIAPI model, Boolean newConnection) en C:\\Users\\joel.nunez\\Desktop\\WEB SERVICES WMS\\WEB SERVICES WMS\\SDK\\Extensions\\Core.cs:línea 104\r\n   en System.Threading.Tasks.Task`1.InnerInvoke()\r\n   en System.Threading.Tasks.Task.Execute()\r\n--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---\r\n   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   en SMA_WEBAPI_WMS.Controllers.ItemsController.<Patch>d__2.MoveNext() en C:\\Users\\joel.nunez\\Desktop\\WEB SERVICES WMS\\WEB SERVICES WMS\\SMA_WEBAPI_WMS\\Controllers\\ItemsController.cs:línea 50","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetCompany\nSDK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\nSDK.Extensions.Core\nSAPbobsCOM.Company GetCompany()","HResult":-2147467261,"Source":"SDK","WatsonBuckets":null}}
+05021309598 | Código: 400 | Respuesta: {"Success":false,"Message":"Referencia a objeto no establecida como instancia de un objeto.","Exception":{"ClassName":"System.NullReferenceException","Message":"Referencia a objeto no establecida como instancia de un objeto.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   en SDK.Extensions.Core.GetCompany() en C:\\Users\\joel.nunez\\Desktop\\WEB SERVICES WMS\\WEB SERVICES WMS\\SDK\\Extensions\\Core.cs:línea 40\r\n   en SDK.Extensions.Core.ConnectToCompany(CompanyModelDIAPI model, Boolean newConnection) en C:\\Users\\joel.nunez\\Desktop\\WEB SERVICES WMS\\WEB SERVICES WMS\\SDK\\Extensions\\Core.cs:línea 104\r\n   en System.Threading.Tasks.Task`1.InnerInvoke()\r\n   en System.Threading.Tasks.Task.Execute()\r\n--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---\r\n   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   en SMA_WEBAPI_WMS.Controllers.ItemsController.<Patch>d__2.MoveNext() en C:\\Users\\joel.nunez\\Desktop\\WEB SERVICES WMS\\WEB SERVICES WMS\\SMA_WEBAPI_WMS\\Controllers\\ItemsController.cs:línea 50","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetCompany\nSDK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\nSDK.Extensions.Core\nSAPbobsCOM.Company GetCompany()","HResult":-2147467261,"Source":"SDK","WatsonBuckets":null}}
+05021509892 | Código: 400 | Respuesta: {"Success":false,"Message":"Referencia a objeto no establecida como instancia de un objeto.","Exception":{"ClassName":"System.NullReferenceException","Message":"Referencia a objeto no establecida como instancia de un objeto.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   en SDK.Extensions.Core.GetCompany() en C:\\Users\\joel.nunez\\Desktop\\WEB SERVICES WMS\\WEB SERVICES WMS\\SDK\\Extensions\\Core.cs:línea 41\r\n   en SDK.Extensions.Core.ConnectToCompany(CompanyModelDIAPI model, Boolean newConnection) en C:\\Users\\joel.nunez\\Desktop\\WEB SERVICES WMS\\WEB SERVICES WMS\\SDK\\Extensions\\Core.cs:línea 104\r\n   en System.Threading.Tasks.Task`1.InnerInvoke()\r\n   en System.Threading.Tasks.Task.Execute()\r\n--- Fin del seguimiento de la pila de la ubicación anterior donde se produjo la excepción ---\r\n   en System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()\r\n   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)\r\n   en SMA_WEBAPI_WMS.Controllers.ItemsController.<Patch>d__2.MoveNext() en C:\\Users\\joel.nunez\\Desktop\\WEB SERVICES WMS\\WEB SERVICES WMS\\SMA_WEBAPI_WMS\\Controllers\\ItemsController.cs:línea 50","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetCompany\nSDK, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\nSDK.Extensions.Core\nSAPbobsCOM.Company GetCompany()","HResult":-2147467261,"Source":"SDK","WatsonBuckets":null}}
+05021509894 | Token expirado o no autorizado.
+05021509895 | Token expirado o no autorizado.
+05021509896 | Token expirado o no autorizado.
+05021509897 | Token expirado o no autorizado.
+05021509898 | Token expirado o no autorizado.
+05021509899 | Token expirado o no autorizado.
+05021509900 | Token expirado o no autorizado.
+05021509901 | Token expirado o no autorizado.
+05021509902 | Token expirado o no autorizado.
+05021509903 | Token expirado o no autorizado.
+05021509904 | Token expirado o no autorizado.
+05021509905 | Token expirado o no autorizado.
+05021509906 | Token expirado o no autorizado.
+05021509907 | Token expirado o no autorizado.
+05021509908 | Token expirado o no autorizado.
+05021509909 | Token expirado o no autorizado.
+05021509910 | Token expirado o no autorizado.
+05021509911 | Token expirado o no autorizado.
+05021509914 | Token expirado o no autorizado.
+05021509919 | Token expirado o no autorizado.
+05021509920 | Token expirado o no autorizado.
+05021509921 | Token expirado o no autorizado.
+05021509923 | Token expirado o no autorizado.
+05021509924 | Token expirado o no autorizado.
+05021509925 | Token expirado o no autorizado.
+05021509927 | Token expirado o no autorizado.
+05021509928 | Token expirado o no autorizado.
+05021509929 | Token expirado o no autorizado.
+05021509932 | Token expirado o no autorizado.
+05022109506 | Token expirado o no autorizado.
+05022109507 | Token expirado o no autorizado.
+05023209671 | Token expirado o no autorizado.
+05023209672 | Token expirado o no autorizado.
+05023209673 | Token expirado o no autorizado.
+05023209674 | Token expirado o no autorizado.
+05023209677 | Token expirado o no autorizado.
+05023209694 | Token expirado o no autorizado.
+05023209695 | Token expirado o no autorizado.
+05023209702 | Token expirado o no autorizado.
+05023209703 | Token expirado o no autorizado.
+05023209705 | Token expirado o no autorizado.
+05023209712 | Token expirado o no autorizado.
+05023209713 | Token expirado o no autorizado.
+05023209714 | Token expirado o no autorizado.
+05023209715 | Token expirado o no autorizado.
+05023209716 | Token expirado o no autorizado.
+05023209717 | Token expirado o no autorizado.
+05023209731 | Token expirado o no autorizado.
+05023209746 | Token expirado o no autorizado.
+05023209747 | Token expirado o no autorizado.
+05023209748 | Token expirado o no autorizado.
+05023209749 | Token expirado o no autorizado.
+03202010003 | Token expirado o no autorizado.
+03202010004 | Token expirado o no autorizado.
+03202010005 | Token expirado o no autorizado.
+032020100058 | Token expirado o no autorizado.
+Proceso completado.
+Proceso completado.
