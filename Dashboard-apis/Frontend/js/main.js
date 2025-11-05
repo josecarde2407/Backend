@@ -1,8 +1,12 @@
 import { apis } from "./api.js";
-
+import { renderSidebar } from "./sidebar.js";
 const cardsContainer = document.getElementById("cards-container");
 const btnRefresh = document.getElementById("btn-refresh");
+const lblUltimaAct = document.getElementById("lbl-ultima-act");
 const msg = document.getElementById("msg");
+const sidebarLinks = document.getElementById("sidebar-links");
+
+renderSidebar(null, sidebarLinks); // index no tiene apiId
 
 async function fetchData(api) {
   try {
@@ -77,7 +81,18 @@ async function actualizarDashboard() {
   const resultados = await Promise.all(apis.map(api => fetchData(api)));
   renderCards(resultados);
   msg.textContent = "✅ Datos actualizados correctamente";
+
+  // ⏱ Actualizar hora última actualización
+  const ahora = new Date();
+  const hora = ahora.toLocaleTimeString('es-PE', {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  });
+
+  lblUltimaAct.textContent = `Última actualización: ${hora}`;
 }
+
 
 // Inicializar
 document.addEventListener("DOMContentLoaded", () => {
@@ -85,4 +100,4 @@ document.addEventListener("DOMContentLoaded", () => {
   actualizarDashboard();
 });
 
-btnRefresh.addEventListener("click", actualizarDashboard);
+btnRefresh.addEventListener("click", actualizarDashboard); // <--- vuelve a añadir esto

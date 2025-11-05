@@ -51,6 +51,8 @@ function registerAPIs(app) {
     { route: "/api/OV", wms: "Orders/1/0/1" },
     { route: "/api/BP", wms: "BusinessPartners/1/0/1" },
     { route: "/api/LO", wms: "BatchNumberDetail/1/0/1" },
+    { route: "/api/NC", wms: "CreditNotes/1/0/1" },
+    { route: "/api/DEV", wms: "PurchaseReturnsRequest/1/0/1" },
     // Aquí puedes agregar más endpoints según sea necesario
   ];
 

@@ -1,32 +1,31 @@
+// frontend/js/sidebar.js
 import { apis } from "./api.js";
 
-const sidebarNav = document.querySelector(".sidebar-nav ul");
-sidebarNav.innerHTML = "";
+export function renderSidebar(currentId, sidebarNav) {
+  if (!sidebarNav) return;
 
-// Generamos ítems
-apis.forEach(api => {
-  const li = document.createElement("li");
-  li.setAttribute("data-label", api.title);
+  // ⚡ Eliminamos solo APIs (dejamos Dashboard y OtSync fijos)
+  sidebarNav.querySelectorAll("li:not([data-label='Dashboard']):not([data-label='OtSync'])").forEach(li => li.remove());
 
-  li.innerHTML = `
-    <a href="api.html?id=${api.id}">
-      <span class="icon">${api.icon}</span>
-      <span class="text">${api.title}</span>
-    </a>
-  `;
+  // ⚡ Insertamos APIs dinámicas
+  apis.forEach(api => {
+    const li = document.createElement("li");
+    li.setAttribute("data-label", api.title);
 
-  sidebarNav.appendChild(li);
-});
+    li.innerHTML = `
+      <a href="api.html?id=${api.id}" class="${api.id === currentId ? "active" : ""}">
+        <span class="icon">${api.icon}</span>
+        <span class="text">${api.title}</span>
+      </a>
+    `;
 
-// Resaltamos activo
-const params = new URLSearchParams(window.location.search);
-const currentId = params.get("id");
+    sidebarNav.appendChild(li);
+  });
 
-if (currentId) {
-  const activeItem = Array.from(sidebarNav.children).find(li =>
-    li.querySelector("a").href.includes(`id=${currentId}`)
-  );
-  if (activeItem) activeItem.classList.add("active");
-} else {
-  sidebarNav.children[0]?.classList.add("active");
+  // ⚡ Marcar activo (Dashboard u OtSync si corresponde)
+  if (!currentId) {
+    const currentPath = window.location.pathname.split("/").pop();
+    const activeLi = sidebarNav.querySelector(`a[href="${currentPath}"]`)?.parentElement;
+    if (activeLi) activeLi.classList.add("active");
+  }
 }
