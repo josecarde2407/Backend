@@ -4,6 +4,7 @@ import json
 import os
 from datetime import date
 
+
 # === CONFIGURACIÓN ===
 script_dir = os.path.dirname(os.path.abspath(__file__))
 EXCEL_PATH = os.path.join(script_dir, "docentry.xlsx")

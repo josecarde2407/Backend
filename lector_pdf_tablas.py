@@ -1,8 +1,8 @@
-import pdfplumber
+import pdfplumber 
 import csv
 
 # Ruta al archivo PDF
-pdf_file = r"C:\Users\jose.cardenas\Downloads\20100898242-09-EG07-16381.pdf"
+pdf_file = r"C:\Users\jose.cardenas\Downloads\GRE - CARRO 2 - DESTRUCCION PT-ME 07-11-25.pdf"
 
 # Ruta del archivo CSV de salida
 csv_file_path = r"C:\Users\jose.cardenas\Downloads\tablas_extraidas.csv"
@@ -23,4 +23,4 @@ with pdfplumber.open(pdf_file) as pdf:
                     writer.writerow(fila)
                 print("\n")
 
-print(f"Tablas extraídas y guardadas en: {csv_file_path}")
+print(f"✅ Tablas extraídas y guardadas en: {csv_file_path}")

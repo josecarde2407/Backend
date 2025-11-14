@@ -1,3 +1,4 @@
+//import { cache } from "react";
 import { apis } from "./api.js";
 import { renderSidebar } from "./sidebar.js";
 const cardsContainer = document.getElementById("cards-container");
@@ -10,7 +11,10 @@ renderSidebar(null, sidebarLinks); // index no tiene apiId
 
 async function fetchData(api) {
   try {
-    const res = await fetch(api.endpoint);
+    const res = await fetch(api.endpoint, {
+      cache: "no-store"
+    });
+
     if (!res.ok) throw new Error(`Error ${res.status}`);
     const data = await res.json();
 
@@ -38,18 +42,53 @@ async function fetchData(api) {
     return { title: api.title, cantidad: "Error" };
   }
 }
+// 🔹 Actualizar solo una card individual
+async function updateSingleCard(api, card) {
+  card.classList.add("loading");
+  const cantidadEl = card.querySelector(".cantidad");
+  const labelEl = card.querySelector(".update-label");
+
+  cantidadEl.textContent = "⏳";
+
+  const result = await fetchData(api);
+
+  if (typeof result.cantidad === "number") {
+    animateCount(cantidadEl, result.cantidad);
+  } else {
+    cantidadEl.textContent = result.cantidad;
+  }
+
+  // ⏱ actualizar label de la card
+  const fecha = new Date();
+  const hora = fecha.toLocaleTimeString("es-PE", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+  labelEl.textContent = `Actualizado: ${hora}`;
+
+  card.classList.remove("loading");
+}
+
 
 function renderCards(resultados) {
   cardsContainer.innerHTML = ""; // limpiar antes de renderizar
 
-  resultados.forEach(r => {
+  resultados.forEach((r, index) => {
+    const api = apis[index]; // 🧩 relación entre card y API
+
     const card = document.createElement("div");
     card.className = "card";
+    card.setAttribute("data-api", api.id); // 🧩 atributo para identificar la API
 
     card.innerHTML = `
       <h3>${r.title}</h3>
       <p class="cantidad">0</p>
+      <span class="update-label">Actualizado: --</span>
     `;
+
+    // 🔹 EVENTO CLICK PARA CONSULTAR SOLO ESA API
+  card.addEventListener("click", () => updateSingleCard(api, card));
 
     cardsContainer.appendChild(card);
     

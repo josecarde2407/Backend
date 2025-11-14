@@ -14,8 +14,8 @@ headers = {
 # Cuerpo (payload)
 payload = {
     "id_almacen": "FOOD1",
-    "fecha_inicial": "2025-05-28",
-    "fecha_final": "2025-06-13",
+    "fecha_inicial": "2025-11-01",
+    "fecha_final": "2025-11-12",
     "id_cliente": "CE0000000001",
     "id_empleado": "",
     "id_ubicacion": "",
