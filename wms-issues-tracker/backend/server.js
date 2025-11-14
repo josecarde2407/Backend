@@ -27,6 +27,13 @@ app.get('/', (req, res) => {
 
 // Iniciar el servidor
 app.listen(process.env.PORT || 5000, () => {
-  console.log('Servidor corriendo en el puerto 5000');
-});
+  console.log("MONGO_URI LEÍDA:", process.env.MONGO_URI);
 
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => console.log('Conectado a MongoDB'))
+  .catch((error) => console.log('Error al conectar a MongoDB', error));
+  console.log(`Servidor iniciado en el puerto ${process.env.PORT || 5000}`);
+});
