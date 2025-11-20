@@ -1,12 +1,28 @@
 const fetch = require("node-fetch");
 
 // ⚙️ Configuración WMS
-const BASE_URL = "http://192.168.5.10:8081/SMA_WEBAPI_WMS/WS/Services";
-const USERNAME = "SAPWMS";
-const PASSWORD = "WMS23X";
-const DEBUG = true;
+const BASE_URL = process.env.BASE_URL;
+const USERNAME = process.env.USER_NAME;
+const PASSWORD = process.env.PASS_WORD;
+const DEBUG = process.env.NODE_ENV !== "production";
+//console.log("🔍 BASE_URL:", BASE_URL);
+
+// Variables internas para caché
+let cachedToken = null;
+let tokenExpiresAt = 0; // timestamp en ms
 
 async function getToken() {
+  const now = Date.now();
+
+  // ⏳ Si el token aún es válido → reutilizar
+  if (cachedToken && now < tokenExpiresAt) {
+    if (DEBUG) console.log("🔁 Reutilizando token en caché");
+    return cachedToken;
+  }
+
+  // ❌ Token venció o no existe → solicitar uno nuevo
+  if (DEBUG) console.log("🔐 Token expirado. Solicitando uno nuevo...");
+
   const resp = await fetch(`${BASE_URL}/Token`, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded", Accept: "application/json" },
@@ -20,8 +36,15 @@ async function getToken() {
   if (!resp.ok) throw new Error(data.error_description || data.error || `HTTP ${resp.status}`);
 
   const token = data.access_token || data.token || data.Token;
-  if (DEBUG) console.log("✅ Token OK (parcial):", token?.slice(0, 20) + "...[oculto]");
   if (!token) throw new Error("Token vacío");
+
+   // ⏱️ Guardar token nuevo
+  cachedToken = token; 
+
+  // 30 segundos de duración - recomendamos restar 2s como margen
+  tokenExpiresAt = now + (30 * 1000) - 2000;
+
+  if (DEBUG) console.log("✅ Token OK y guardado en caché:", token?.slice(0, 20) + "...[oculto]");
   return token;
 }
 

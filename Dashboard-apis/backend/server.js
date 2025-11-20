@@ -1,3 +1,6 @@
+require("dotenv").config({ path: __dirname + "/.env" });
+//console.log("BASE_URL from dotenv:", process.env.BASE_URL);
+
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
