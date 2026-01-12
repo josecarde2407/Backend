@@ -2,7 +2,7 @@ import pdfplumber
 import csv
 
 # Ruta al archivo PDF
-pdf_file = r"C:\Users\jose.cardenas\Downloads\GRE - CARRO 2 - DESTRUCCION PT-ME 07-11-25.pdf"
+pdf_file = r"C:\Users\jose.cardenas\Downloads\20100898242-09-T006-2531.pdf"
 
 # Ruta del archivo CSV de salida
 csv_file_path = r"C:\Users\jose.cardenas\Downloads\tablas_extraidas.csv"
